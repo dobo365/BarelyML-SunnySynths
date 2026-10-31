@@ -1,32 +1,30 @@
-# BarelyML
+# BarelyML - Sunny Synths markdown
 
 Markup display for JUCE - Barely a Markup Language
 
-Introducing BarelyML, the markup language nobody asked for but you're getting anyway! When I realized that just implementing a Markdown display for JUCE apps would not give me the flexibility I needed, I combined my favourite features from different markup languages (e.g. the headers from Markdown and the tables from DokuWiki) and added a simple coloring scheme on top.
+BarelyML - Sunny Synths markdown is an extension of the BarelyML library made by Friz Menzer in 2023. It is providing a more complete handling of the initialy supported markdown tags but has also enhanced it with new ones. Only the Markdown part has been enhanced and tested.
 
-As a plus, BarelyMLDisplay can convert simple Markdown, DokuWiki, and AsciiDoc content to its own syntax on the fly, and comes with a handy interactive demo project (as a PIP => just drag BarelyMLDemo.h onto a Projucer window).
+Copy the BarelyML - Sunny Synths.cpp and .h files to your Juce project.
+Test with the TESTME.md file.
 
-## Version history
+### Latest version: 0.8 
+Date: June 15th 2026
+Author:  Dominique Bontemps - Sunny Synths
 
-### 0.3 (2024-04-07)
-- Changed the definition of FileSource to enable vector graphics (SVG)
-- Adds a URLHandler class
-- Adds links and images in tables
-- Various minor improvements
-
-### 0.2.1 (2023-10-20)
-- Fixes a bug where AsciiDoc link labels with spaces in them are not recognized
-- Improves BarelyML <--> Markdown conversion
-- Adds custom colour scheme and non-standard font to BarelyMLDemo 
-- Improves drawing of text blocks
-
-### 0.2 (2023-10-20)
-- Comes now with an interactice demo (as a PIP for the Projucer)
-- Fixes a bug where text may be not displayed (see [JUCE Forum](https://forum.juce.com/t/attributedstring-last-line-disappearing-when-preceding-line-was-wrapped/58396))
-- Removed juce namespace from BarelyML.h
-- Added conversion methods for DokuWiki and AsciiDoc
-
-### 0.1 (2023-10-08)
-- initial release
+- Corrected the usage of table background colours 
+- Adapted to be closer to the Github Wiki layout
+- Added support for double tilde tag to indicate a strikethrough text
+- Handle right/center/left alignment in tables columns
+- Links are not in bold; they get a pointing hand cursor when hovered
+- Tables are rendered as in Github Wiki (even rows have a very light background, grid in light grey, header in bold) 
+- Supports inline code using single back tick tag and code blocks using triple back tick tags
+- Code text is displayed in courier new font on a grey rectangle background
+- Ability to copy code block by pressing an icon
+- Added horizontal rule drawing using standard markdown "---" tag
+- Blockquote marking using standard markdown "> " tag
+- Adapted Admonition block tagging as "!!! TYPE" and "!!!"
+- Possible Admonition block types are: HINT, INFO, CAUTION, WARNING, OTHER, MISC 
+- Completely rewritten Admonition blocks rendering that also covers blockquote
+- Modified H1 heading rendering to be more in line with GitHub's H1 rendering (with a line drawn below the text)
 
 Licensed under the MIT license, in the hope it will be useful to as many people as possible.
